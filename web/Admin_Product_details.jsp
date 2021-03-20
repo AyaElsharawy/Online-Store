@@ -110,7 +110,7 @@
         </div>
         <!-- Breadcrumb End -->
         
-        <!-- Wishlist Start -->
+        <!-- Product_Details-page Start -->
         <div class="Product_Details-page">
             <div class="container-fluid">
                 <div class="Product_Details-page-inner">
@@ -258,7 +258,7 @@
                 </div>
             </div>
         </div>
-        <!-- Wishlist End -->
+        <!-- Product_Details-page End -->
         
         <!-- Footer Start -->
         <div class="footer">
