@@ -134,11 +134,11 @@
         </div>
         <!-- Main Slider End -->
         
-            <!-- Recent Product Start -->
+            <!-- Recent Product mobile Start -->
             <div class="recent-product product">
                 <div class="container-fluid">
                     <div class="section-header">
-                        <h1>Products</h1>
+                        <h1>MOBILE</h1>
                     </div>
                     <div class="row align-items-center product-slider product-slider-4">
                         <div class="col-lg-3">
@@ -251,7 +251,126 @@
                     </div>
                 </div>
             </div>
-            <!-- Recent Product End -->
+            <!-- Recent Product mobile End -->
+
+            <!-- Recent Product labtop Start -->
+            <div class="recent-product product">
+                <div class="container-fluid">
+                    <div class="section-header">
+                        <h1>LAPTOP</h1>
+                    </div>
+                    <div class="row align-items-center product-slider product-slider-4">
+                        <div class="col-lg-3">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">Xiaomi POCO X3</a>
+                                    <p >Dual SIM Mobile, 6.67 Inches, 128 GB, 6 GB RAM, 4G LTE - Cobalt Blue</p>
+                                   
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src="img/prod6.jpg" width="300" height="300" alt="Product Image">
+                                    </a>
+                                    
+                                       
+                                        <a href="cart.html" stock class="btn cart">
+                                            <i >left in stock </i>
+                                            <span>(0)</span>
+                                        </a>
+                                         
+                                        
+                                   
+                                </div>
+                                <div class="product-price">
+                                    <h3><span>EGP </span>4,200 </h3>
+                                    <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">Product Name</a>
+                                   
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src="img/product-7.jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3><span>$</span>99</h3>
+                                    <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">Product Name</a>
+                                   
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src="img/product-8.jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3><span>$</span>99</h3>
+                                    <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">Product Name</a>
+                                   
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src="img/product-9.jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3><span>$</span>99</h3>
+                                    <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="product-item">
+                                <div class="product-title">
+                                    <a href="#">Product Name</a>
+                                   
+                                </div>
+                                <div class="product-image">
+                                    <a href="product-detail.html">
+                                        <img src="img/product-10.jpg" alt="Product Image">
+                                    </a>
+                                    <div class="product-action">
+                                        
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <h3><span>$</span>99</h3>
+                                    <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Product laptop End -->
         
         <!-- Brand Start -->
         <div class="brand">
@@ -339,4 +458,3 @@
         <script src="js/main.js"></script>
     </body>
 </html>
-
