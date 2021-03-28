@@ -1,9 +1,15 @@
 <%-- 
-    Document   : product_details
-    Created on : Mar 22, 2021, 6:30:17 PM
+    Document   : ProductDetails
+    Created on : Mar 28, 2021, 7:49:41 PM
     Author     : Hagar
 --%>
 
+<%@page import="java.sql.SQLException"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -29,6 +35,16 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
 
+    <%
+     String id = request.getParameter("id");
+    try{
+    Class.forName("org.postgresql.Driver");
+    Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost/souq","postgres","1111");
+   
+    String query ="select * from product where id = ? ";     
+    Statement stmt= connection.createStatement();
+    ResultSet res= stmt.executeQuery(query);
+%>
     <body>
          <!-- Nav Bar Start -->
          <div class="nav">
@@ -114,18 +130,19 @@
                             <div class="row align-items-center">
                                 <div class="col-md-5">
                                     <div class="product-slider-single normal-slider">
-                                        <img src="img/product-3.jpg" alt="Product Image">
+                                        <% out.println("<img src=\""+res.getString(4)+"\" name=\"image"+res.getString(1)+"\" alt=\"Image\">");%>
                                
                                     </div>
                                    
                                 </div>
                                 <div class="col-md-7">
                                     <div class="product-content">
-                                        <div class="title"><h2>Product Name</h2></div>
+                                          <%while (res.next()){%>
+                                        <div class="title"><h2> <%out.println("<input type=\"text\" size=\"20\" name=\"name\" value=\""+res.getString(2)+"\">");%></h2></div>
                                        
                                         <div class="price">
                                             <h4>Price:</h4>
-                                            <p>$99 </p>
+                                            <p><%out.println("<td class=\"col-width\">$<input type=\"text\" name=\"price\" size=\"3\" value=\""+res.getInt(7)+"\"></td>");%> </p>
                                         </div>
                                         <div class="quantity">
                                             <h4>Quantity:</h4>
@@ -151,6 +168,7 @@
                                 <ul class="nav nav-pills nav-justified">
                                     <li class="nav-item">
                                         <a class="nav-link active" data-toggle="pill" href="#description">Description</a>
+                                        
                                     </li>
                                    
                                 </ul>
@@ -159,7 +177,7 @@
                                     <div id="description" class="container tab-pane active">
                                         <h4>Product description</h4>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum quam ac mi viverra dictum. In efficitur ipsum diam, at dignissim lorem tempor in. Vivamus tempor hendrerit finibus. Nulla tristique viverra nisl, sit amet bibendum ante suscipit non. Praesent in faucibus tellus, sed gravida lacus. Vivamus eu diam eros. Aliquam et sapien eget arcu rhoncus scelerisque. Suspendisse sit amet neque neque. Praesent suscipit et magna eu iaculis. Donec arcu libero, commodo ac est a, malesuada finibus dolor. Aenean in ex eu velit semper fermentum. In leo dui, aliquet sit amet eleifend sit amet, varius in turpis. Maecenas fermentum ut ligula at consectetur. Nullam et tortor leo. 
+                                            <%out.println("<textarea form=\"form"+res.getString(1)+"\" name=\"description\" >"+res.getString(3)+"</textarea>");%>
                                         </p>
                                     </div>
                                     
@@ -168,9 +186,19 @@
                             </div>
                         </div>
                         
-                       
+                        <%}%> 
+                                <%res.close();
+                                connection.close();
+                                stmt.close();
+                                }catch(ClassNotFoundException ex){
+                                response.sendRedirect("Exception.html"); 
+                                }catch(SQLException ex){
+                                response.sendRedirect("Exception.html");
+                                }
+                                %>
                     </div>
                     
+                                        
                     
                 </div>
             </div>
