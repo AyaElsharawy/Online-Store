@@ -1,10 +1,3 @@
-<%-- 
-    Document   : HomePage
-    Created on : Mar 19, 2021, 8:58:05 PM
-    Author     : Hagar
---%>
-
-
 <%@page import="java.sql.SQLException"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>
