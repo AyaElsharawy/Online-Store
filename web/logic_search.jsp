@@ -87,7 +87,7 @@
                         <div class="search">
                             
                             
-                            <form id="myForm" action="HomePage.jsp">
+                            <form id="myForm" action="logic_search.jsp">
                                 <input type="text" name="search_input" placeholder="Search">
                             <button onclick="submitForm()"><i class="fa fa-search"></i></button>
                           <label for="price">Price</label>
@@ -120,9 +120,9 @@
         
              <% String search = request.getParameter("search");
             boolean check = true;
-            double search_input = Double.parseDouble(request.getParameter("search_input"));
+            
             if ("price".equals(search) ) {
-                    
+                    double search_input = Double.parseDouble(request.getParameter("search_input"));
                     Connection con = null;
                     // ResultSet result;
                     PreparedStatement statment;
@@ -135,7 +135,7 @@
 
                     Class.forName("org.postgresql.Driver");
                     con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
-                    statment = con.prepareStatement("select id,name,price,image,quantity from product where price=" + search_input + "");
+                    statment = con.prepareStatement("select id,name,price,image,quantity from product where price=" + search_input );
 
                     ResultSet result = statment.executeQuery();
 
@@ -209,8 +209,7 @@
                 int id = 0;
                 int quantity = 0;
 
-                Class.forName("org.postgresql.Driver");
-                con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
+            
                 statment = con.prepareStatement("select id,name,price,image,quantity from product where category_id=2");
 
                 ResultSet result = statment.executeQuery();
@@ -273,8 +272,7 @@
             int id = 0;
             int quantity = 0;
 
-            Class.forName("org.postgresql.Driver");
-            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
+            
             statment = con.prepareStatement("select id,name,price,image,quantity from product where category_id=1");
 
             ResultSet result = statment.executeQuery();%>
