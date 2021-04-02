@@ -1,8 +1,3 @@
-<%-- 
-    Document   : HomePage
-    Created on : Mar 19, 2021, 8:58:05 PM
-    Author     : Hagar
---%>
 
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.DriverManager"%>
@@ -222,8 +217,7 @@
                                     id = 0;
                                     quantity = 0;
 
-                                    Class.forName("org.postgresql.Driver");
-                                    con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
+                                 
                                     statment = con.prepareStatement("select id,name,description,price,image,quantity from product where id=2");
 
                                     result = statment.executeQuery();
@@ -284,8 +278,7 @@
                                     id = 0;
                                     quantity = 0;
 
-                                    Class.forName("org.postgresql.Driver");
-                                    con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
+                                   
                                     statment = con.prepareStatement("select id,name,description,price,image,quantity from product where id=3");
 
                                     result = statment.executeQuery();
@@ -343,8 +336,7 @@
                                     id = 0;
                                     quantity = 0;
 
-                                    Class.forName("org.postgresql.Driver");
-                                    con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
+                                    
                                     statment = con.prepareStatement("select id,name,description,price,image,quantity from product where id=4");
 
                                     result = statment.executeQuery();
@@ -399,8 +391,6 @@
                                     id = 0;
                                     quantity = 0;
 
-                                    Class.forName("org.postgresql.Driver");
-                                    con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
                                     statment = con.prepareStatement("select id,name,description,price,image,quantity from product where id=5");
 
                                     result = statment.executeQuery();
@@ -466,8 +456,7 @@
                                     id = 0;
                                     quantity = 0;
 
-                                    Class.forName("org.postgresql.Driver");
-                                    con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
+                                    
                                     statment = con.prepareStatement("select id,name,description,price,image,quantity from product where id=9");
 
                                     result = statment.executeQuery();
@@ -523,8 +512,7 @@
                                     id = 0;
                                     quantity = 0;
 
-                                    Class.forName("org.postgresql.Driver");
-                                    con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
+                                    
                                     statment = con.prepareStatement("select id,name,description,price,image,quantity from product where id=10");
 
                                     result = statment.executeQuery();
@@ -578,8 +566,7 @@
                                     id = 0;
                                     quantity = 0;
 
-                                    Class.forName("org.postgresql.Driver");
-                                    con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
+                                    
                                     statment = con.prepareStatement("select id,name,description,price,image,quantity from product where id=11");
 
                                     result = statment.executeQuery();
@@ -634,8 +621,7 @@
                                     id = 0;
                                     quantity = 0;
 
-                                    Class.forName("org.postgresql.Driver");
-                                    con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
+                                  
                                     statment = con.prepareStatement("select id,name,description,price,image,quantity from product where id=13");
 
                                     result = statment.executeQuery();
@@ -690,8 +676,7 @@
                                     id = 0;
                                     quantity = 0;
 
-                                    Class.forName("org.postgresql.Driver");
-                                    con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/souq", "postgres", "0000");
+                                    
                                     statment = con.prepareStatement("select id,name,description,price,image,quantity from product where id=12");
 
                                     result = statment.executeQuery();
