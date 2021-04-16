@@ -154,11 +154,12 @@
                                         </tr>
                                      
                                 <%while (res.next()){%>
-                                        <tr><form id="formd<%out.print(res.getString(1));%>" action="DeleteProduct" method="GET">
+                                        <tr>
+                                        <!--<form id="formd<%out.print(res.getString(1));%>" action="DeleteProduct" method="GET">-->
                                             <form id="form<%out.print(res.getString(1));%>" action="Edit" method="GET">
                                             <td class="col-width">
                                                 <div class="img">
-                                                    <% out.println("<img src=\""+res.getString(4)+"\" name=\"image"+res.getString(1)+"\" alt=\"Image\">");%>
+                                                    <% out.println("<img height=\"50px\" width=\"50px\" src=\""+res.getString(4)+"\" name=\"image"+res.getString(1)+"\" alt=\"Image\">");%>
                                                 </div>
                                             </td>
                                             <%out.println("<td class=\"col-width\"><input type=\"text\" name=\"id\" size=\"3\" value=\""+res.getInt(1)+"\"></td>");%>
@@ -166,7 +167,7 @@
                                                 <%out.println("<input type=\"text\" size=\"20\" name=\"name\" value=\""+res.getString(2)+"\">");%>
                                                 
                                                 </td>
-                                                 <%out.println("<td class=\"col-width\">$<input type=\"text\" name=\"price\" size=\"3\" value=\""+res.getInt(7)+"\"></td>");%>
+                                                 <%out.println("<td class=\"col-width\"><input type=\"text\" name=\"category\" size=\"3\" value=\""+res.getInt(7)+"\"></td>");%>
                                                 <%out.println("<td class=\"col-width\">$<input type=\"text\" name=\"price\" size=\"3\" value=\""+res.getInt(5)+"\"></td>");%>
                                                 <%out.println("<td class=\"col-width\"><input type=\"text\" name=\"quantity\" size=\"3\" value=\""+res.getInt(6)+"\"></td>");%>
 
@@ -178,14 +179,16 @@
                                             <td class="col-width">
                                                 
                                                 
-                                                <input type="submit">
+                                                
                                                 <input type="reset">
-                                                <button form="form<%out.print(res.getString(1));%>" type="submit" class="btn-cart" value="Update">Update</button>
-                                                <button form="formd<%out.print(res.getString(1));%>" type="submit" class="btn-cart" value="Delete"><i class="fa fa-trash"></i></button>
+                                                <input type="submit"  value="update" >
+                                                <input type="submit"  value="delete" onclick="form.action='DeleteProduct';" >
+                                                <!--<button form="form<%//out.print(res.getString(1));%>" onclick="form.action='SecondServlet';" type="submit" name="updatebtn" class="btn-cart" value="Update">Update</button>
+                                                <button form="form<%//out.print(res.getString(1));%>" type="submit" name="deletebtn" class="btn-cart" value="Delete"><i class="fa fa-trash"></i></button>-->
                                             
                                             </td>
                                             <input  type="hidden" name="hidden" value="<%out.print(res.getInt(1));%>">
-                                            </form></form>
+                                            </form>
                                             
                                         </tr>
                                         
@@ -202,9 +205,7 @@
                                     </tbody>
                                 </table>
                                     
-                            </div>
-                            <button class="btn-insert">Insert New Product</button>
-                        </div>
+                          
                     </div>
                 </div>
             </div>
